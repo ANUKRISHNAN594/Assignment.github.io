@@ -1,0 +1,46 @@
+/* Base styles for blocks */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.block {
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 calc(33.33% - 20px); /* Default for 3 blocks */
+}
+
+/* Media Query for 1024px and above */
+@media (min-width: 1024px) {
+  .block {
+      background-color: lightgreen;
+      color: darkgreen;
+  }
+}
+
+/* Media Query for 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .block {
+      flex: 1 1 calc(50% - 20px); /* 2 blocks */
+      background-color: lightblue;
+      color: darkblue;
+  }
+}
+
+/* Media Query for 540px to 767px */
+@media (min-width: 540px) and (max-width: 767px) {
+  .block {
+      flex: 1 1 100%; /* Single column */
+      background-color: lightcoral;
+      color: darkred;
+  }
+}
+
+/* Media Query for below 540px */
+@media (max-width: 539px) {
+  .block {
+      flex: 1 1 100%; /* Single column */
+      background-color: darksalmon;
+      color: darkgoldenrod; /* Dark yellow */
+  }
+}
